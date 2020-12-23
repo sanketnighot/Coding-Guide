@@ -22,13 +22,20 @@ async function FirebaseSignup(name, username, email, password) {
 		}
 		const auth = firebase.auth();
 		await auth.createUserWithEmailAndPassword(email, password);
-		alert("Account Created Successfully !!!");
-		return auth.currentUser.updateProfile({
+		let user =  auth.currentUser
+		user.sendEmailVerification().then(function() {
+			alert("Please Check Email to verify your account");
+		  }).catch(function(error) {
+			alert("An error occured ... Please try again");
+		  });
+		user.updateProfile({
 			username: username,
 			name: name,
 			email: email,
 			password: password
 		})
+		alert("Account Created Successfully !!!");
+
 	} catch (error) {
 		alert(error);
 	}

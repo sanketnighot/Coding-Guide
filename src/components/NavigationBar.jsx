@@ -58,7 +58,7 @@ function NavigationBar() {
                             </Nav.Item>
 
                             <Nav.Item>
-                                <Nav.Link href="codingzone" eventKey="link-4">Coding HUB</Nav.Link>
+                                <Nav.Link href="http://127.0.0.1:8000/" eventKey="link-4">Coding HUB</Nav.Link>
                             </Nav.Item>
 
                             <Nav.Item>
