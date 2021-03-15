@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import {fbContactForm} from './firebase/FirebaseApp'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -14,46 +15,39 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function FormContactUs() {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
     const classes = useStyles();
-    const [value, setValue] = React.useState();
-    const handleChange = (event) => {
-        setValue(event.target.value);
+
+    const sendContactForm =
+        (event, name, email, message) => {
+            fbContactForm(name, email,message);
+        };
+
+    const onChangeHandler = (event) => {
+        const { name, value } = event.currentTarget;
+
+        if (name === 'name') {
+            setName(value);
+        }
+        else if (name === 'email') {
+            setEmail(value);
+        } 
+        else if (name === 'message') {
+            setMessage(value);
+        } 
     };
 
+
+
     return (
-        <form className={classes.root} noValidate autoComplete="off" align="center">
-            <div class="col">
-                <TextField
-                    id="outlined-multiline-flexible"
-                    label="Enter Your Name"
-                    multiline
-                    value={value}
-                    onChange={handleChange}
-                    variant="outlined"
-                    autoFocus
-                />
-                <br />
-                <TextField
-                    id="outlined-textarea"
-                    label="Enter E-Mail Id Here"
-                    placeholder="Placeholder"
-                    variant="outlined"
-                />
-                <br />
-                <TextField
-                    id="outlined-multiline-static"
-                    label="Enter Message Here"
-                    rows={7}
-                    cold={18}
-                    variant="outlined"
-                />
-                <br /><br/>
-                <Button
-                    variant="outlined"
-                    className={classes.button}
-                >
-                    Send
-      </Button>
+        <form>
+            <input type="text" className="form-control mt-4" placeholder="Enter Your Name" required autofocus autocomplete="off" value={name} name="name" onChange={(event) => { onChangeHandler(event) }}/>
+            <input type="email" className="form-control mt-4" placeholder="Enter Your Email-Id" required autofocus autocomplete="off" value={email} name="email" onChange={(event) => { onChangeHandler(event) }}/>
+            <input type="textfeild" className="form-control mt-4" placeholder="Enter Your Message" required autofocus autocomplete="off" value={message} name="message" onChange={(event) => { onChangeHandler(event) }}/>
+            <div className="mt-5">
+                <Button variant="contained" color="Success" onClick = {(event) => {sendContactForm(event, name, email, message)}}>Send</Button>
             </div>
         </form>
     );

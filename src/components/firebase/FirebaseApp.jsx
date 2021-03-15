@@ -1,5 +1,6 @@
 import React from 'react';
 import firebase from "firebase/app";
+require('firebase/firestore');
 require('firebase/auth');
 import { getContrastRatio } from '@material-ui/core';
 
@@ -62,4 +63,22 @@ const FirebaseLogout = (email, password) => {
 	return auth.signOut();
 }
 
-export { FirebaseSignup, FirebaseLogin, FirebaseLogout };
+async function fbContactForm(name, email, message) {
+	try {
+		if (!firebase.apps.length) {
+			firebase.initializeApp(firebaseConfig);
+		}
+		var db = firebase.firestore();
+		db.collection("ContactForm").add({
+			"senderName" : name,
+			"senderEmail" : email,
+			"senderMessage" : message
+
+		});
+	}
+	catch (error){
+		alert(error)
+	}
+}
+
+export { FirebaseSignup, FirebaseLogin, FirebaseLogout, fbContactForm };
