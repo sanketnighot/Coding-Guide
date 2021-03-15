@@ -37,14 +37,12 @@ export default function FormContactUs() {
                     id="outlined-textarea"
                     label="Enter E-Mail Id Here"
                     placeholder="Placeholder"
-                    multiline
                     variant="outlined"
                 />
                 <br />
                 <TextField
                     id="outlined-multiline-static"
                     label="Enter Message Here"
-                    multiline
                     rows={7}
                     cold={18}
                     variant="outlined"
