@@ -1,0 +1,59 @@
+.rotating-box {
+	width: 300px;/* 400 */
+	height: 300px;/* 400 */
+	margin: 10px auto;
+	perspective: 800px;/* 800 */
+	margin-top: 80px;
+}
+.single-rb {
+	width: 300px;/* 400 */
+	height: 300px;/* 400 */
+	animation: rotate 15s linear infinite;
+	transform-style: preserve-3d;
+	margin-top: 120px;
+}
+.single-rb img {
+	height: 300px;/* 400 */
+	width: 300px;/* 400 */
+}
+.single-rb div {
+	position: absolute;
+	width: 300px;/* 400 */
+	height: 300px;/* 400 */
+}
+.front-side {
+	transform: translateZ(150px);
+	opacity: 0.7;
+}
+.back-side {
+	transform: rotateY(180deg) translateZ(150px);
+	opacity: 0.7;
+}
+.left-side {
+	transform: rotateY(-90deg) translateX(-150px);
+	transform-origin: left;
+	opacity: 0.7;
+}
+.right-side {
+	transform: rotateY(90deg) translateX(150px);
+	transform-origin: right;
+	opacity: 0.7;
+}
+.top-side {
+	transform: rotateX(-90deg) translateY(-150px);
+	transform-origin: top;
+	opacity: 0.7;
+}
+.bottom-side {
+	transform: rotateX(90deg) translateY(150px);
+	transform-origin: bottom;
+	opacity: 0.7;
+}
+@keyframes rotate {
+	0% {
+		transform: rotateY(0deg);
+	}
+	100% {
+		transform: rotateY(360deg);
+	}
+}

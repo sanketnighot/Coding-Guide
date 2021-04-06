@@ -11,7 +11,7 @@ import GridContainer from "../../components/Grid/GridContainer.js";
 import GridItem from "../../components/Grid/GridItem";
 import Footer from "../../components/Footer/Footer";
 import Button from "../../components/CustomButtons/Button.js";
-
+import Cube from '../../components/Cube/Cube';
 
 // import Button from "components/CustomButtons/Button.js";
 
@@ -21,6 +21,7 @@ import ProductSection from './Sections/ProductSection';
 
 import styles from "../../assets/jss/material-kit-react/views/components.js";
 import SectionPills from './Sections/SectionPills';
+
 
 
 const useStyles = makeStyles(styles);
@@ -56,6 +57,7 @@ export default function Components(props) {
             </div>
           </Parallax>
           <div className={classNames(classes.main, classes.mainRaised)}>
+            <Cube/>
             <ProductSection/>
             <SectionPills/>
           </div>
