@@ -3,6 +3,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import firebase from "firebase/app";
+import Container from '../components/container/Container';
 require('firebase/auth');
 // import NavDropdown from 'react-bootstrap/NavDropdown'
 // import Form from 'react-bootstrap/Form'
@@ -39,6 +40,7 @@ function NavigationBar() {
         <>
 
 
+
             <div className="col-md-10">
                 <Navbar className="shadow-lg p-3 mb-5 bg-white rounded" expand="lg" fixed="top">
                     <Navbar.Brand href="/" style={{ fontFamily: 'Montserrat' }}>
@@ -67,6 +69,11 @@ function NavigationBar() {
 
                             <Nav.Item>
                                 <Nav.Link href="contact" eventKey="link-5">Contact Us</Nav.Link>
+                            </Nav.Item>
+
+                            <Nav.Item>
+                                <Nav.Link href="collab" eventKey="link-6">Collab</Nav.Link>
+                            
                             </Nav.Item>
 
                             <Nav.Item>

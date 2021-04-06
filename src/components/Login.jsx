@@ -11,7 +11,7 @@ const Login = () => {
         (event, email, password) => {
                 try {
                     event.preventDefault();
-                    response = firebaseLogin(email, password)
+                   const response = FirebaseLogin(email, password)
                     alert(response);
                 } catch (error) {
                     alert(error);
