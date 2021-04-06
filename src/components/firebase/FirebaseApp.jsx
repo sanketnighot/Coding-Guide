@@ -2,7 +2,6 @@ import React from 'react';
 import firebase from "firebase/app";
 require('firebase/firestore');
 require('firebase/auth');
-//import { getContrastRatio } from '@material-ui/core';
 
 const firebaseConfig = {
 	apiKey: "AIzaSyAXJtph7xZ0hkJ5Ekkp-ZoQo43uRQOq0tU",

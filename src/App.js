@@ -10,6 +10,7 @@ import CodingZone from './components/CodingZone';
 import Error from './components/Error';
 import Profile from './components/Profile';
 import LoginSignup from './components/LoginSignup';
+import Test from './components/Test';
 import Container from './components/container/Container';
 function App() {
 	return (
@@ -22,7 +23,7 @@ function App() {
 				<div className="row justify-content-md-center">
 					<Switch>
 						<Route exact path="/" component={Home} />
-						<Route exact path="/about" component={About} />
+						<Route exact path="/about" component={Test} />
 						<Route exact path="/contact" component={Contact} />
 						<Route exact path="/codingzone" component={CodingZone} />
 						<Route exact path="/projects" component={Projects} />
