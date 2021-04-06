@@ -18,7 +18,6 @@ export default function Contact(props) {
     return (
         <>
                 <Header
-                    
                     // color="transparent"
                     brand="CodeHub"
                     rightLinks={<HeaderLinks/>}
