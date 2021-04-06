@@ -12,6 +12,8 @@
     "axios": "^0.21.1",
     "bootstrap": "^4.5.3",
     "firebase": "^8.3.0",
+    "framer-motion": "^4.1.2",
+    "mdbreact": "^5.0.1",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
     "react-contact-form": "0.0.1-rc.2",
@@ -19,8 +21,11 @@
     "react-mail-form": "^2.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "react-slick": "^0.28.1",
     "react-swipeable-views": "^0.13.9",
     "sass": "^1.32.8",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^5.2.3",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

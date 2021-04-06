@@ -5,14 +5,27 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter } from 'react-router-dom';
-
-
+//moe imorts
+//main page imports
+import Components from "../src/views/Components/Components";
+import { createBrowserHistory } from "history";
+import { Router, Route, Switch } from "react-router-dom";
+import Login from "../src/views/Login/Login";
+import Contact from "../src/views/Contact/Contact";
+import Project from "../src/views/Project/Project";
+import Team from '../src/views/Team/Team';
+var hist = createBrowserHistory();
 ReactDOM.render(
-    <React.StrictMode>
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
-    </React.StrictMode>,
+
+    <Router history={hist}>
+          <Switch>      
+            <Route exact path="/" component={Components} />
+            <Route path="/Login" component={Login} />
+            <Route path="/Team" component={Team} />
+            <Route path="/Project" component={Project} />
+            <Route path="/Contact" component={Contact} />
+          </Switch>
+    </Router>,
     document.getElementById('root')
 );
 
