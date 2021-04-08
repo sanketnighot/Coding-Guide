@@ -80,11 +80,10 @@ export default function HeaderLinks(props) {
               Login/SignUp
             </Link>,
             <a
-              href="https://creativetimofficial.github.io/material-kit-react/#/documentation?ref=mkr-navbar"
-              target="_blank"
+              href="/Chat"
               className={classes.dropdownLink}
             >
-              Documentation
+              Chat
             </a>
           ]}
         />

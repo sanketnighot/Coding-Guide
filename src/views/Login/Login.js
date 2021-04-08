@@ -56,8 +56,7 @@ const AppContainer = styled.div`
               </GridContainer>
             </div>
             <Footer/>
-          </div>
-          
+          </div> 
       </>
       
     );
