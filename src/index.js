@@ -17,6 +17,7 @@ import Contact from "../src/views/Contact/Contact";
 import Project from "../src/views/Project/Project";
 import Team from '../src/views/Team/Team';
 import Chat from "../src/components/Chat/Chat";
+import ViewProject from './views/Project/ViewProject';
 var hist = createBrowserHistory();
 ReactDOM.render(
 
@@ -28,6 +29,7 @@ ReactDOM.render(
             <Route path="/Project" component={Project} />
             <Route path="/Contact" component={Contact} />
             <Route path="/Chat" component={Chat} />
+            <Route path="/ViewProject" component={ViewProject} />
           </Switch>
     </Router>,
     document.getElementById('root')
