@@ -3,12 +3,12 @@ import { containerFluid } from "../../material-kit-react";
 import imagesStyle from "../imagesStyles";
 
 const exampleStyle = {
-  nusta:{
-    background: "red"
-
+  space:{
+    marginTop: '20px'
   },
-  rada:{
-    background:"blue"
+  butt:{
+    marginLeft: "10px",
+    marginTop: "8px"
   },
   section: {
     padding: "70px 0"
