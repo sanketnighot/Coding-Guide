@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+// eslint-disable-next-line
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
+// eslint-disable-next-line
 import { BrowserRouter } from 'react-router-dom';
 //moe imorts
 //main page imports
