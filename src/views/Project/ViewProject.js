@@ -6,8 +6,8 @@ import HeaderLinks from '../../components/Header/HeaderLinks';
 import { makeStyles } from "@material-ui/core/styles";
 import GridContainer from '../../components/Grid/GridContainer';
 import GridItem from '../../components/Grid/GridItem';
-import image from '../../assets/img/bg7.jpg'
-import Contro from '../../components/Contributors/Contro'
+import image from '../../assets/img/bg7.jpg';
+import FullWidthTabs from '../../components/Compiler/FullWidthTabs'
 const useStyles = makeStyles(styles);
 
 
@@ -32,7 +32,7 @@ export default function ViewProject(props) {
                 <GridItem xs={12} sm={12} md={5}>
                     <GridItem className={classes.borderBottom}>
                         <GridContainer className={classes.sideSectionUpper}>
-                            <Contro/>    
+                            <FullWidthTabs/>
                         </GridContainer>
                     </GridItem>
                     <GridItem>

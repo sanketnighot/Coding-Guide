@@ -79,12 +79,7 @@ export default function HeaderLinks(props) {
             <Link to={"Login"} className={classes.dropdownLink, classes.navLink}>
               Login/SignUp
             </Link>,
-            <a
-              href="/Chat"
-              className={classes.dropdownLink}
-            >
-              Chat
-            </a>
+            
           ]}
         />
       </ListItem>

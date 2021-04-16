@@ -29,7 +29,7 @@ const viewproject = {
           borderBottom:'1px solid black'
       },
       sideSectionUpper:{
-          height:'30vh',
+          height:'50vh',
           width:'100%',
       },
       mainRaised: {
