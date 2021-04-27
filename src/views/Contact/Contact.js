@@ -1,9 +1,9 @@
 import React from 'react';
+import {useState} from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 //import components
 import Header from "../../components/Header/Header";
 import HeaderLinks from '../../components/Header/HeaderLinks';
-import image from "../../assets/img/bg4.jpg"
 
 import styles from "../../assets/jss/material-kit-react/views/components";
 import Footer from '../../components/Footer/Footer';
@@ -12,9 +12,50 @@ import GridContainer from '../../components/Grid/GridContainer';
 import GridItem from '../../components/Grid/GridItem';
 const useStyles = makeStyles(styles);
 
+//database
+const axios = require('axios');
+axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+
+
 export default function Contact(props) {
     const classes = useStyles();    
     const { ...rest } = props;
+    //mongo
+    var [name, setName] = useState("");
+    var [email, setEmail] = useState("");
+    var [subject, setSubject] = useState("");
+    var [message, setMessage] = useState("");
+
+    const onChangeHandler = (event) =>{
+        const { name, value } = event.currentTarget;
+        if (name === "text"){
+          setName(value);
+          console.log(value);
+        }
+        else if (name === "email"){
+          setEmail(value);
+        }
+        else if (name === "subject"){
+            setSubject(value);
+        }
+        else if (name === "message"){
+            setMessage(value);
+        }
+      }
+
+      const createContact = async ()=>{
+          const data = {
+              name:name,
+              email:email,
+              subject:subject,
+              message:message
+          }
+          console.log(data);
+           
+      }
+
+
+
     return (
         <>
                 <Header

@@ -45,7 +45,7 @@ export function SignupForm(props) {
     if (password === cpassword) {
     const data = {
       name: name,
-      email: email,
+      email: email, 
       password: password
     }
     console.log(data);
