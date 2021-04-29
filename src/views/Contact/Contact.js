@@ -3,7 +3,9 @@ import { makeStyles } from "@material-ui/core/styles";
 //import components
 import Header from "../../components/Header/Header";
 import HeaderLinks from '../../components/Header/HeaderLinks';
+
 // import image from "../../assets/img/bg4.jpg"
+
 
 import styles from "../../assets/jss/material-kit-react/views/components";
 import Footer from '../../components/Footer/Footer';
@@ -15,13 +17,21 @@ const axios = require('axios');
 axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 
 
+//database
+axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+
+
 export default function Contact(props) {
     const classes = useStyles();    
     const { ...rest } = props;
+
+    //mongo
+
     var [name, setName] = useState("");
     var [email, setEmail] = useState("");
     var [subject, setSubject] = useState("");
     var [message, setMessage] = useState("");
+
     const onChangeHandler = (event) =>{
         const { name, value } = event.currentTarget;
         if (name === "email"){
@@ -60,7 +70,6 @@ export default function Contact(props) {
         }).catch( (error)=>{console.log(error);});
       }
     }
-
 
 
     return (
