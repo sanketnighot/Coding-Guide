@@ -37,7 +37,6 @@ export default function ViewProject(props) {
                     </GridItem>
                     <GridItem>
                         <GridContainer >
-                            
                         </GridContainer>
                     </GridItem>
                 </GridItem>
