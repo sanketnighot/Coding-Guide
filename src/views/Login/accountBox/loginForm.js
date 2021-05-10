@@ -29,8 +29,12 @@ export function LoginForm(props) {
     await fetch(`http://localhost:8000/user-email=${email}&password=${password}`).then((response) => response.json()).then((data)=>{
       if (data.message) {
       alert("Login Failed");
+      setEmail("");
+      setPassword("");
     } else {
       alert(`Name: ${data.name}`);
+      setEmail("");
+      setPassword("");
     }
     });
   }

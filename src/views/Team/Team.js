@@ -67,8 +67,8 @@ export default function Tea(props) {
                     <img src={profile} alt="..." className={imageClasses} />
                   </div>
                   <div className={classes.name}>
-                    <h3 className={classes.title}>Christian Louboutin</h3>
-                    <h6>DESIGNER</h6>
+                    <h3 className={classes.title}>Tanaya Jadhav</h3>
+                    <h6>Frontend</h6>
                     <Button justIcon link className={classes.margin5}>
                       <i className={"fab fa-twitter"} />
                     </Button>
@@ -87,8 +87,8 @@ export default function Tea(props) {
                     <img src={profile} alt="..." className={imageClasses} />
                   </div>
                   <div className={classes.name}>
-                    <h3 className={classes.title}>Christian Louboutin</h3>
-                    <h6>DESIGNER</h6>
+                    <h3 className={classes.title}>Sanket Nighot</h3>
+                    <h6>Full stack Developer</h6>
                     <Button justIcon link className={classes.margin5}>
                       <i className={"fab fa-twitter"} />
                     </Button>
@@ -107,8 +107,8 @@ export default function Tea(props) {
                     <img src={profile} alt="..." className={imageClasses} />
                   </div>
                   <div className={classes.name}>
-                    <h3 className={classes.title}>Christian Louboutin</h3>
-                    <h6>DESIGNER</h6>
+                    <h3 className={classes.title}>Rohit Suryawanshi</h3>
+                    <h6>Frontend/API</h6>
                     <Button justIcon link className={classes.margin5}>
                       <i className={"fab fa-twitter"} />
                     </Button>

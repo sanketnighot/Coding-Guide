@@ -1,9 +1,11 @@
-import React from 'react';
-import {useState} from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 //import components
 import Header from "../../components/Header/Header";
 import HeaderLinks from '../../components/Header/HeaderLinks';
+
+// import image from "../../assets/img/bg4.jpg"
+
 
 import styles from "../../assets/jss/material-kit-react/views/components";
 import Footer from '../../components/Footer/Footer';
@@ -11,16 +13,20 @@ import {  MDBContainer, MDBRow, MDBCol, MDBIcon, MDBBtn, MDBInput } from "mdbrea
 import GridContainer from '../../components/Grid/GridContainer';
 import GridItem from '../../components/Grid/GridItem';
 const useStyles = makeStyles(styles);
+const axios = require('axios');
+axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+
 
 //database
-const axios = require('axios');
 axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 
 
 export default function Contact(props) {
     const classes = useStyles();    
     const { ...rest } = props;
+
     //mongo
+
     var [name, setName] = useState("");
     var [email, setEmail] = useState("");
     var [subject, setSubject] = useState("");
@@ -28,32 +34,42 @@ export default function Contact(props) {
 
     const onChangeHandler = (event) =>{
         const { name, value } = event.currentTarget;
-        if (name === "text"){
-          setName(value);
-          console.log(value);
-        }
-        else if (name === "email"){
+        if (name === "email"){
           setEmail(value);
+
         }
-        else if (name === "subject"){
-            setSubject(value);
+        else if (name === "name"){
+          setName(value);
         }
         else if (name === "message"){
             setMessage(value);
-        }
-      }
-
-      const createContact = async ()=>{
-          const data = {
-              name:name,
-              email:email,
-              subject:subject,
-              message:message
           }
-          console.log(data);
-           
-      }
+        else if (name === "subject"){
+            setSubject(value);
+          }
+    }
 
+    const sendForm = async ()=>{
+        if (name === "" || email === "" || subject === "" || message === ""){
+            alert("Please enter all the fields ...")
+        }
+        else {
+        const data = {
+          name: name,
+          email: email,
+          subject: subject,
+          message: message
+        }
+        console.log(data);
+        await axios.post('http://localhost:8000/contactform', data).then((response) => {
+          alert("Form Submitted Successfully !!!");
+          setName("");
+          setEmail("");
+          setSubject("");
+          setMessage("");
+        }).catch( (error)=>{console.log(error);});
+      }
+    }
 
 
     return (
@@ -80,40 +96,40 @@ export default function Contact(props) {
                                     <MDBRow>
                                     <MDBCol md="6">
                                         <div className="md-form mb-0">
-                                        <MDBInput type="text" id="contact-name" label="Your name" />
+                                        <MDBInput name="name" value={name} onChange={(event) => { onChangeHandler(event) }} type="text" id="contact-name" label="Your name" required />
                                         </div>
                                     </MDBCol>
                                     <MDBCol md="6">
                                         <div className="md-form mb-0">
-                                        <MDBInput
+                                        <MDBInput name="email" value={email} onChange={(event) => { onChangeHandler(event) }}
                                             type="text"
                                             id="contact-email"
                                             label="Your email"
-                                        />
+                                        required />
                                         </div>
                                     </MDBCol>
                                     </MDBRow>
                                     <MDBRow>
                                     <MDBCol md="12">
                                         <div className="md-form mb-0">
-                                        <MDBInput type="text" id="contact-subject" label="Subject" />
+                                        <MDBInput name="subject" value={subject} onChange={(event) => { onChangeHandler(event) }} type="text" id="contact-subject" label="Subject" required />
                                         </div>
                                     </MDBCol>
                                     </MDBRow>
                                     <MDBRow>
                                     <MDBCol md="12">
                                         <div className="md-form mb-0">
-                                        <MDBInput
+                                        <MDBInput name="message" value={message} onChange={(event) => { onChangeHandler(event) }}
                                             type="textarea"
                                             id="contact-message"
                                             label="Your message"
-                                        />
+                                        required />
                                         </div>
                                     </MDBCol>
                                     </MDBRow>
                                 </form>
                                 <div className="text-center text-md-left">
-                                    <MDBBtn color="primary" size="md">
+                                    <MDBBtn color="primary" size="md" onClick={() => {sendForm()}}>
                                     Send
                                     </MDBBtn>
                                 </div>
@@ -122,15 +138,16 @@ export default function Contact(props) {
                                 <ul className="list-unstyled mb-0">
                                     <li>
                                     <MDBIcon icon="map-marker-alt" size="2x" className="blue-text" />
-                                    <p>Maharastra, India</p>
+                                    <p>{name}</p>
                                     </li>
                                     <li>
                                     <MDBIcon icon="phone" size="2x" className="blue-text mt-4" />
-                                    <p>+91 9876543210</p>
+                                    <p>{email}</p>
                                     </li>
                                     <li>
                                     <MDBIcon icon="envelope" size="2x" className="blue-text mt-4" />
-                                    <p>rsurya1760@gmail.com</p>
+                                    <p>{subject}</p> <br/>
+                                    <p>{message}</p>
                                     </li>
                                 </ul>
                                 </MDBCol>
