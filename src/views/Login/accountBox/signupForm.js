@@ -13,11 +13,6 @@ import { AccountContext } from "./accountContext";
 const axios = require('axios');
 axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 
-
-
-
-
-
 export function SignupForm(props) {
   const { switchToSignin } = useContext(AccountContext);
   var [name, setName] = useState("");
