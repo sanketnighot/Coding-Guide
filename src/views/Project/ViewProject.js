@@ -8,6 +8,8 @@ import GridContainer from '../../components/Grid/GridContainer';
 import GridItem from '../../components/Grid/GridItem';
 import image from '../../assets/img/bg7.jpg';
 import FullWidthTabs from '../../components/Compiler/FullWidthTabs'
+import Files from '../../components/Files/Files';
+import Compiler from '../Compiler/Compiler'
 const useStyles = makeStyles(styles);
 
 
@@ -25,23 +27,24 @@ export default function ViewProject(props) {
             />
         </div>
         <div className={classes.main}>
-            <GridContainer className={classes.container}>
+            {/* <GridContainer className={classes.container}>
                 <GridItem xs={12} sm={12} md={7} className={classes.codesection, classes.borderRight}>
                     <img src={image} className={classes.img}/>
                 </GridItem>
                 <GridItem xs={12} sm={12} md={5}>
-                    <GridItem className={classes.borderBottom}>
+                    <GridItem>
+                        <GridContainer >
+                            <Files/>
+                        </GridContainer>
+                    </GridItem>
+                </GridItem>
+                <GridItem className={classes.borderBottom}>
                         <GridContainer className={classes.sideSectionUpper}>
                             <FullWidthTabs/>
                         </GridContainer>
                     </GridItem>
-                    <GridItem>
-                        <GridContainer >
-                            
-                        </GridContainer>
-                    </GridItem>
-                </GridItem>
-            </GridContainer>
+            </GridContainer> */}
+            <Compiler/>
         </div>
             
         <Footer/>        
