@@ -4,12 +4,9 @@ import { Link } from 'react-router-dom';
 import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-import Tooltip from "@material-ui/core/Tooltip";
 
 //matrial icon
-import {CloudDownload } from "@material-ui/icons";
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-import ContactSupportIcon from '@material-ui/icons/ContactSupport';
 // core components
 import CustomDropdown from "../CustomDropdown/CustomDropdown";
 import Button from "../CustomButtons/Button";
@@ -78,8 +75,7 @@ export default function HeaderLinks(props) {
           dropdownList={[
             <Link to={"Login"} className={classes.dropdownLink, classes.navLink}>
               Login/SignUp
-            </Link>,
-            
+            </Link>
           ]}
         />
       </ListItem>

@@ -6,7 +6,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Dashboard from "@material-ui/icons/Dashboard";
 import Schedule from "@material-ui/icons/Schedule";
 import BugReportIcon from '@material-ui/icons/BugReport';
-import List from "@material-ui/icons/List";
+// import List from "@material-ui/icons/List";
 
 // core components
 import GridContainer from "../../../components/Grid/GridContainer.js";

@@ -4,11 +4,11 @@ import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
 import HeaderLinks from '../../components/Header/HeaderLinks';
 import { makeStyles } from "@material-ui/core/styles";
-import GridContainer from '../../components/Grid/GridContainer';
-import GridItem from '../../components/Grid/GridItem';
-import image from '../../assets/img/bg7.jpg';
-import FullWidthTabs from '../../components/Compiler/FullWidthTabs'
-import Files from '../../components/Files/Files';
+// import GridContainer from '../../components/Grid/GridContainer';
+// import GridItem from '../../components/Grid/GridItem';
+// import image from '../../assets/img/bg7.jpg';
+// import FullWidthTabs from '../../components/Compiler/FullWidthTabs'
+// import Files from '../../components/Files/Files';
 import Compiler from '../Compiler/Compiler'
 const useStyles = makeStyles(styles);
 

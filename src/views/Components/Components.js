@@ -1,16 +1,16 @@
 import React from 'react';
 import classNames from "classnames";
 // react components for routing our app without refresh
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 
 //core components
 import Header from '../../components/Header/Header'; 
 import Parallax from "../../components/Parallax/Parallax";
-import GridContainer from "../../components/Grid/GridContainer.js";
-import GridItem from "../../components/Grid/GridItem";
+// import GridContainer from "../../components/Grid/GridContainer.js";
+// import GridItem from "../../components/Grid/GridItem";
 import Footer from "../../components/Footer/Footer";
-import Button from "../../components/CustomButtons/Button.js";
+// import Button from "../../components/CustomButtons/Button.js";
 import Cube from '../../components/Cube/Cube';
 
 // import Button from "components/CustomButtons/Button.js";

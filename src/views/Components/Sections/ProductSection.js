@@ -34,7 +34,7 @@ export default function ProductSection() {
           <GridItem xs={12} sm={12} md={4}>
             <InfoArea
               title="Interactive Coding"
-              description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
+              description="As a human we help each other to grow platform gives opportunity to all come together and work"
               icon={CodeIcon}
               iconColor="success"
               vertical
@@ -43,7 +43,7 @@ export default function ProductSection() {
           <GridItem xs={12} sm={12} md={4}>
             <InfoArea
               title="Easy Sharing"
-              description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
+              description="Sharing is caring but always we face problem during sharing our work with others due to some circumstances but its not a problem now"
               icon={ShareIcon}
               iconColor="secondary"
               vertical
@@ -52,7 +52,7 @@ export default function ProductSection() {
           <GridItem xs={12} sm={12} md={4}>
             <InfoArea
               title="Cloud Based Storage"
-              description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
+              description="Having huge amount of data no problem we are here for you and believe you data is our main priority so have faith in us blindly"
               icon={CloudDownloadIcon}
               iconColor="info"
               vertical
@@ -61,7 +61,7 @@ export default function ProductSection() {
           <GridItem xs={12} sm={12} md={6}>
             <InfoArea
               title="Multi Language Support"
-              description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
+              description="For different language setting up new enviroment is old school now just one click and you ready to go with us..."
               icon={LanguageIcon}
               iconColor="rose"
               vertical
@@ -70,7 +70,7 @@ export default function ProductSection() {
           <GridItem xs={12} sm={12} md={6}>
             <InfoArea
               title="Technical Blogs"
-              description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
+              description="Want to speak? discuss your ideas express your thoughts with millions other whoo share same intrest as you :)g"
               icon={BookIcon}
               iconColor="warning"
               vertical
